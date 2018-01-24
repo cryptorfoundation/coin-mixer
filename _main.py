@@ -12,7 +12,7 @@ def main():
     processor_rate = 20
 
     j_coin_processor = TransactionQueue(target_addresses, processor_rate, api, "MixerPoolAddress")
-    j_coin_mixer = CoinMixer(api, target_addresses, j_coin_processor)
+    j_coin_mixer = CoinMixer(api, j_coin_processor)
     j_coin_mixer.start()
 
 

@@ -1,4 +1,4 @@
-#Context
+# Context
 Coin Mixer Challenge
 Despite some media reports, Bitcoin is not an anonymous protocol.
 Instead, it's often referred to as a pseudonymous system.
@@ -22,12 +22,12 @@ There are a number of reasons to use a Bitcoin mixer. For instance, if your sala
   Please create a Jobcoin mixer, analogous to the Bitcoin mixer described above. You may collect a fee for your mixing service if you wish.
 
 
-#Approach
+# Approach
   Simple commandline app that reads two new address arguments that the mixed coins will be moved to. The mixer creates a deposit account
   for the user to deposit coins to me mixed and then they are transferred to the larger pool with existing coins. Finally pushed to the
   new Addresses provided by the user.
 
-#Security flaws
+# Security flaws
   Any user of this commandLine based mixer can be traced back to their IP. All requests sent to and from the JobCoin api
   is tied back to its IP. From a code standpoint, the application can connect via VPN to mask some traceability. Another approach is to update
   api calls to go through the tor network, to mask IPs etc. The stem module would be a great tool to incorporate into this project to do such.
@@ -37,10 +37,11 @@ There are a number of reasons to use a Bitcoin mixer. For instance, if your sala
 
   Ideally the user creates the new address anomalously and then uses the mixer. This helps to mask their relationship to the new addresses
 
-##Requirments
+## Requirments
  1. Python 3
  2. pytest version = '3.3.2'
- 3. Mac OS X
+ 3. requests 
+ 4. Mac OS X
 
 ## Setup
 
@@ -50,13 +51,19 @@ There are a number of reasons to use a Bitcoin mixer. For instance, if your sala
  2.`$ brew install python3`
 
  3. `pip install pytest`
+  
+ 4. `pip install requests`
+
+ 5. `virtualenv --python=python3 env_name`
+
+ 6.  `source ./env_name/bin/activate` 
 
 ## To Runt Tests
  1. Run tests:
    `$ python3 -m pytest  `
 
  ##  Run code
-   1. python3 _main.py newAddress1 newAddress2
+   1. python3 main.py newAddress1 newAddress2
 
    2. You will then see
       `Please send required mixing coins to this Address: deposit_address2648`

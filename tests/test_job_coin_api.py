@@ -1,4 +1,4 @@
-from mock import patch, Mock
+from unittest.mock import Mock, patch
 import requests
 
 from address_details import AddressDetails

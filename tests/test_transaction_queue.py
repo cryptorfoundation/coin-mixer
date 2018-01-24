@@ -1,5 +1,5 @@
 from decimal import Decimal
-from mock import Mock, call, patch
+from unittest.mock import Mock, patch, call
 from transaction_queue import TransactionQueue
 import time
 

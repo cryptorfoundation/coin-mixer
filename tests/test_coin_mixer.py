@@ -1,5 +1,5 @@
 import random
-from mock import Mock, patch
+from unittest.mock import Mock, patch
 
 from address_details import AddressDetails
 from coin_mixer import CoinMixer

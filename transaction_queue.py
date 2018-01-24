@@ -1,4 +1,5 @@
 from decimal import Decimal
+import unittest.mock
 import time
 
 
@@ -17,6 +18,7 @@ class TransactionQueue:
             address_index_two = 1
             self.coin_api.transfer_coins_to_new_address(self.from_address, transfer[address_index_one], transfer[address_index_two])
             time.sleep(self._delay_rate)
+        print("Check your new addresses, all transfers have been sent")
 
     @staticmethod
     def build_transactions(total_transfer_amount, target_addresses):

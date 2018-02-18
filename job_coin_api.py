@@ -3,9 +3,9 @@ from address_details import AddressDetails
 
 
 class JobCoinApi:
-    URL_ADDRESS = 'http://jobcoin.gemini.com/tattle/api/addresses/'
-    URL_CREATE = 'https://jobcoin.gemini.com/tattle/create'
-    URL_TRANSACTIONS = 'http://jobcoin.gemini.com/tattle/api/transactions'
+    URL_ADDRESS = ''
+    URL_CREATE = ''
+    URL_TRANSACTIONS = ''
 
     def get_address_details(self, address):
         try:
